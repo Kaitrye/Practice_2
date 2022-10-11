@@ -11,24 +11,32 @@ int main() {
 int n;
 std::cin >> n;
 
-for (int row=1, star=1, space=n-1; row<=n; ++row, star+=2, --space) {
+for (int row=1, star=1; row<=n; ++row, star+=2) {
 	for (int count=0; count<n; ++count){
-		Space(space);
-		for (int i=1; i<=star; ++i){
+		for (int i=1; i<=n-row; ++i) {
+			std::cout << ' ';
+		}
+		for (int i=1; i<=2*row-1; ++i){
 			std::cout << '*';
 		}
-		Space(space);
+		for (int i=1; i<=n-row; ++i) {
+			std::cout << ' ';
+		}
 	}
 	std::cout << std::endl;
 }
 
-for (int row=2, star=1+(n-2)*2, space=1; row<=n; ++row, star-=2, ++space) {
+for (int row=1; row<n; ++row) {
 	for (int count=0; count<n; ++count) {
-		Space(space);
-		for (int i=1; i<=star; ++i) {
+		for (int i=1; i<=row; ++i) {
+			std::cout << ' ';
+		}
+		for (int i=1; i<=2(n-row)-1; ++i) {
 			std::cout << '*';
 		}
-		Space(space);
+		for (int i=1; i<=row; ++i) {
+			std::cout << ' ';
+		}
 	}
 	std::cout << std::endl;
 }
