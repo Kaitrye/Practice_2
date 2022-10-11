@@ -5,14 +5,14 @@ int main() {
 int n;
 std::cin >> n;
 
-for (int i=1, j=1, z=n-1; i<=n; ++i, j+=2, z--) {
-	for (int v=1; v<=z; ++v) {
+for (int row=1, star=1, place=n-1; row<=n; ++row, star+=2, --place) {
+	for (int i=1; i<=place; ++i) {
 		std::cout << " ";
 	}
-	for (int v=1; v<=j; ++v){
+	for (int i=1; i<=star; ++i){
 		std::cout << "*";
 	}
-	for (int v=1; v<=z; ++v) {
+	for (int i=1; i<=place; ++place) {
 		std::cout << " ";
 	}
 	std::cout << std::endl;
