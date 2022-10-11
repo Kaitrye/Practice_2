@@ -6,8 +6,8 @@ int n;
 std::cin >> n;
 
 for (int row=0; row<n; ++row) {
-	for (int star=0; star<=row; ++star) {
-		std::cout << "*";
+	for (int i=0; i<=row; ++i) {
+		std::cout << '*';
 	}
 std::cout << std::endl;
 }
