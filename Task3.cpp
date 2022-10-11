@@ -1,8 +1,8 @@
 #include <iostream>
 
 void Space(int n) {
-	for (int v=1; v<=n; ++v) {
-		std::cout << " ";
+	for (int i=1; i<=n; ++i) {
+		std::cout << ' ';
 	}
 };
 
@@ -11,19 +11,19 @@ int main() {
 int n;
 std::cin >> n;
 
-for (int i=1, j=1, z=n-1; i<=n; ++i, j+=2, z--) {
+for (int row=1, star=1, space=n-1; row<=n; ++row, star+=2, --space) {
 	Space(z);
-	for (int v=1; v<=j; ++v){
-		std::cout << "*";
+	for (int i=1; i<=star; ++i){
+		std::cout << '*';
 	}
 	Space(z);
 	std::cout << std::endl;
 }
 
-for (int i=2, j=1+(n-2)*2, z=1; i<=n; ++i, j-=2, z++) {
+for (int row=2, star=1+(n-2)*2, space=1; row<=n; ++row, star-=2, ++space) {
 	Space(z);
-	for (int v=1; v<=j; ++v) {
-		std::cout << "*";
+	for (int i=1; i<=star; ++i) {
+		std::cout << '*';
 	}
 	Space(z);
 	std::cout << std::endl;
