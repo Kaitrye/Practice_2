@@ -1,10 +1,10 @@
 #include <iostream>
 
 bool Function(double x, double y) {
-
 	double sup_f = x*x + y*y - 1;
 
 	if (sup_f*sup_f*sup_f - x*x*y*y*y <= 0) return 1;
+	
 	return 0;
 }
 
